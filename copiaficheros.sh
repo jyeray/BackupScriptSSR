@@ -1,7 +1,7 @@
 #!/bin/bash
-file="./files.txt"
+file="./backup_file_paths"
 if [ ! -f $file ]; then 	
-    echo "#insert files path#" >> $file
+    echo "#--insert file path--#" >> $file
 fi
 cat $file | grep "/" | while read line
 do	
