@@ -1,5 +1,12 @@
 #!/bin/bash
 file="./backup_file_paths"
+
+if [ -z $1 ]
+then
+    echo "A name for the backup file is needed:  \"./backup_script.sh name_of_backup\""
+    exit 1
+fi
+
 if [ ! -f $file ]; then
     echo "#--insert file path--#" >> $file
 fi
